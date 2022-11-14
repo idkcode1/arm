@@ -44,7 +44,7 @@ void delay_ms(int j)
 void LCD_INIT(void)
 {
 	IO0DIR = 0x0000FFF0;//P0.0-P0.12 to LCD
-	LCD_CMD(0x30);
+	LCD_CMD(0x38);
 	LCD_CMD(0x0C);
 	LCD_CMD(0x06);
 	LCD_CMD(0x01);
@@ -66,7 +66,7 @@ void LCD_CMD(char command)
 //DATA write function(single character)
 void LCD_CHAR(char msg)
 {
-	IO0PIN = ( ( IO0PIN & 0xFFFFFF00)|(msg<<8));
+	IO0PIN = ( ( IO0PIN & 0xFFFF00FF)|(msg<<8));
 	IO0SET = 0x00000050;
 	IO0CLR = 0x00000040;
 	delay_ms(2);
