@@ -1,4 +1,4 @@
-
+#include <pll.h>
 #include <lpc214x.h>
 
 void init_uart0(void){
