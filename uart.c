@@ -1,5 +1,4 @@
 #include "pll.h"
-#include "uart.h"
 #include<lpc214x.h>
 
 int main(){
