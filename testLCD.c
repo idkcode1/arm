@@ -16,9 +16,9 @@ int main(void)
 	char val_j[3];
 	LCD_INIT();
 	
-	LCD_STRING("VISHAK LOVES U");
+	LCD_STRING("GOD LOVES U");
 	LCD_CMD(0xC0);
-	LCD_STRING("VAL OF J IS:");
+	LCD_STRING("time remaining:");
 	for(j=0;j<10;j++)
 	{
 		
